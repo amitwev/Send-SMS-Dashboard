@@ -9,7 +9,6 @@ function App() {
   const [textAreaLength, setTextAreaLength] = useState(0)
 
   useEffect(() => {
-    console.log("effecting"); 
     fetchData('/messages_history', {method: "GET"}, handleHistoryMessages)
   }, [blockSubmitButton])
 
