@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root {
+    --main-background-color: lightgray;
+    --black: #000;
+    --white: #fff;
+    --font-size: 12px;
+    --bad-response: #f60000;
+    --ok-response: #007700;
+}
+
+body {
+    background-color: var(--main-background-color);
+    font-size: var(--font-size);
+}
+
+#main {
+    margin: 40px auto;
+    font-size: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button.clear.btn {
+    text-decoration: underline;
+    background: transparent;
+    border: 0;
+    text-align: left;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button.Submit {
+    height: 40px;
+    background: var(--black);
+    border: 0;
+    border-radius: 1rem;
+    color: var(--white);
+}
+
+.new__message,
+.message__history {
+    background: var(--white);
+    margin: 40px 20px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.inputs__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+span.text_area_length {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    font-size: 0.875rem;
+}
+
+input.phone__message,
+input.phone__input {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+input.phone__input {
+    height: 40px;
+}
+
+input.phone__message {
+    height: 80px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-around;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.message__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message .data {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 50%;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.message .data>span {
+    overflow-x: scroll;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.Submit[disabled] {
+    background: gray;
+    cursor: wait;
+    pointer-events: none;
+}
+
+.response__SMS_message {
+    margin: 1rem 0;
+}
+
+.response__SMS_message.failed {
+    color: var(--bad-response);
+}
+
+.response__SMS_message.valid {
+    color: var(--ok-response);
+}
+
+.messages__container {
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+@media(max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
