@@ -9,7 +9,7 @@ function App() {
   const [textAreaLength, setTextAreaLength] = useState(0)
 
   useEffect(() => {
-    fetchData('/messages_history', {method: "GET"}, handleHistoryMessages)
+    fetchData('/messages-history', {method: "GET"}, handleHistoryMessages)
   }, [blockSubmitButton])
 
   const handleHistoryMessages = function(data){
@@ -69,7 +69,7 @@ function App() {
       return sendMessageResponseHandler({status: "bad", body: "Please check phone and message"})
     }
     setBlockSubmitButton(true);
-    const url = '/send_SMS'
+    const url = '/send-sms'
     let body = buildBody(message, phoneNumber);
     fetchData(url, 
       { 

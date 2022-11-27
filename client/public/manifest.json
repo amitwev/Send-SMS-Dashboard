@@ -1,7 +1,6 @@
 {
     "short_name": "Send SMS app",
     "name": "Send SMS with Twilio",
-    "icons": [],
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",

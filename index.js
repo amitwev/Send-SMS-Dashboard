@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require("path");
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
@@ -10,15 +11,17 @@ const port = process.env.PORT || 5001 ;
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use((req, res, next) => {
-  next();
-});
+// app.use((req, res, next) => {
+//   next();
+// });
+
+app.use(express.static(`${__dirname}/client/build`));
 
 app.get('/', (req, res) => {
-  res.send({ body: "Body of server" });
+  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 })
 
-app.post('/send_SMS', async (req, res) => {
+app.post('/send-sms', async (req, res) => {
   const data = req.body;
   if (!helpers.validateData(data)) {
     console.log("invalid data")
@@ -40,7 +43,7 @@ app.post('/send_SMS', async (req, res) => {
     });
 })
 
-app.get('/messages_history', async (req, res) => {
+app.get('/messages-history', async (req, res) => {
   const history = await helpers.getAllMessageHistory(); 
   console.log(history);
   res.send(history);
