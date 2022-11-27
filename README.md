@@ -1,7 +1,6 @@
 # Send-SMS-Dashboard
 
-Send SMS application with Twilio
-Demo: https://send-sms-dashboard.herokuapp.com/
+Send SMS application with Twilio [demo](https://send-sms-dashboard.herokuapp.com/)
 
 ## Installation
 
