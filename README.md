@@ -6,8 +6,6 @@ Send SMS application with Twilio [demo](https://send-sms-dashboard.herokuapp.com
 
 Use npm install on server and client to install required dependencies for the application 
 
-## Usage
-
 ```node.js
 npm install && cd client && npm install && npm run build
 
