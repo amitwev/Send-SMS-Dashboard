@@ -1,12 +1,7 @@
-
-
-Application is running with React & Node.js
-The application served on Heroku
-Demo: https://send-sms-dashboard.herokuapp.com/
-
 # Send-SMS-Dashboard
 
-Send SMS application with Twilio 
+Send SMS application with Twilio
+Demo: https://send-sms-dashboard.herokuapp.com/
 
 ## Installation
 
